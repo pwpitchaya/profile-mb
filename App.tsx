@@ -5,7 +5,6 @@ import {
   LayoutChangeEvent,
   Linking,
   Pressable,
-  ScrollView,
   Text,
   useColorScheme,
   useWindowDimensions,
@@ -125,7 +124,7 @@ function Portfolio() {
   const pageWidth = Math.min(width, 1120);
   const horizontalPadding = width < 390 ? 16 : width < 760 ? 20 : 36;
   const contentWidth = pageWidth - horizontalPadding * 2;
-  const scrollRef = useRef<ScrollView>(null);
+  const scrollRef = useRef<React.ComponentRef<typeof Animated.ScrollView>>(null);
   const [aboutY, setAboutY] = useState(0);
   const scrollY = useSharedValue(0);
   const floatOne = useSharedValue(0);
@@ -204,7 +203,7 @@ function Portfolio() {
       <StatusBar style={themeName === "dark" ? "light" : "dark"} />
 
       <Animated.ScrollView
-        ref={scrollRef as React.RefObject<ScrollView>}
+        ref={scrollRef}
         onScroll={onScroll}
         scrollEventThrottle={16}
         contentInsetAdjustmentBehavior="automatic"
