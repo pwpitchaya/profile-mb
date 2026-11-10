@@ -743,7 +743,7 @@ function Portfolio() {
           <View style={{ flexDirection: isWide ? "row" : "column", justifyContent: "space-between", gap: 18, paddingHorizontal: 4, paddingTop: 18 }}>
             <View>
               <Text style={{ color: palette.text, fontSize: 13, fontWeight: "800" }}>Pawapitchaya Kamwongsa</Text>
-              <Text style={{ color: palette.muted, fontSize: 10, marginTop: 4 }}>Built with Expo SDK 57 · React Native · TypeScript</Text>
+              <Text style={{ color: palette.muted, fontSize: 10, marginTop: 4 }}>Built with Expo SDK 54 · React Native · TypeScript</Text>
             </View>
             <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
               <FooterLink label="Instagram" onPress={() => openUrl("https://www.instagram.com/210947cp")} palette={palette} />
